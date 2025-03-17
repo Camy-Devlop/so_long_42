@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/03/17 17:49:36 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/03/17 17:59:17 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,10 +57,10 @@ $(NAME) : ${OBJ} $(LIBFT) $(LIBX)
 	@$(CC) $(OBJ) -o $(NAME) $(FLAGS) -L$(LIBFT_SRC) -lft -I$(LIBX_SRC) -L$(LIBX_SRC) -lmlx -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz
 
 ${LIBFT} : 
-	$(MAKE) -C $(LIBFT_SRC) all
+	@$(MAKE) -C $(LIBFT_SRC) all
 
 ${LIBX} : $(LIBX_SRC) 
-	$(MAKE) -C $(LIBX_SRC)
+	@$(MAKE) -C $(LIBX_SRC)
 
 %.o : %.c
 	@$(CC) -c $< $(FLAGS) -I$(LIBFT_SRC)include -I$(LIBX_SRC) -o $@ 
@@ -74,8 +74,6 @@ fclean : clean
 	$(RM) -f $(NAME)
 	$(MAKE) -C $(LIBFT_SRC) fclean
 	$(MAKE) -C $(LIBX_SRC) clean
-:w
-
 
 re : fclean all
 

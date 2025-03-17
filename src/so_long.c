@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/17 16:44:16 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/03/17 19:32:44 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,12 +77,12 @@ int main(int n, char **tab)
 //pix  = ft_point(10, 10, (int)0x00FF0000);
 //	pix2 = ft_point(30, 142,(int)0x00FF0000);
 	//ft_draw(win->img, pix);
-	ft_draw_line( ft_point(10, 10,(int)0x00FF0000), ft_point(90, 300, (int)0x00FF0000), win->img);
+	ft_draw_line( ft_point(50, 10,(int)0x00FF0000), ft_point(11, 300, (int)0x00FF0000), win->img);
 	mlx_put_image_to_window(win->mlx, win->win, win->img, 0, 0);
-	sleep(5);
+	/*sleep(5);
 	mlx_clear_window(win->mlx, win->win);
 	sleep(5);
-	ft_draw_line( ft_point(40, 100, (int)0x00FF0000), ft_point(90, 300, (int)0x00FF0000), win->img);
+	ft_draw_line( ft_point(40, 100, (int)0x00FF0000), ft_point(41, 300, (int)0x00FF0000), win->img);*/
 	mlx_put_image_to_window(win->mlx, win->win, win->img, 0, 0);
 	mlx_key_hook(win->win, ft_key_move, win);
 	mlx_hook(win->win, 33, 1L<<17, ft_close, win);	
