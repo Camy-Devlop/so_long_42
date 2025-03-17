@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/03/17 17:41:38 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/03/17 17:49:36 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRC =./src/so_long.c \
 		./src/window/ft_window.c
 
 CC = cc 
-FLAGS = -Wall -Wextra -Werror -g3
+FLAGS = -Wall -Wextra -Werror -g3 -O3
 NAME = so_long 
 RM = rm
 OBJ = ${SRC:.c=.o}
@@ -63,7 +63,7 @@ ${LIBX} : $(LIBX_SRC)
 	$(MAKE) -C $(LIBX_SRC)
 
 %.o : %.c
-	$(CC) -c $< $(FLAGS) -I$(LIBFT_SRC)include -L$(LIBFT_SRC) -lft -I$(LIBX_SRC) -L$(LIBX_SRC) -lmlx -lmlx_Linux -O3 -o $@ 
+	@$(CC) -c $< $(FLAGS) -I$(LIBFT_SRC)include -I$(LIBX_SRC) -o $@ 
 
 clean : 
 	$(RM) -f $(OBJ) 
