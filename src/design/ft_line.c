@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 11:54:15 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/17 19:35:42 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/03/17 20:00:00 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_draw_line(t_point p1, t_point p2, t_img *data)
 	{
         ft_draw(data, pix, p1->color);
         if (pix.x == p2->pixel.x && pix.y == p2->pixel.y) break;
-        	e2 = 2 * err;
+        e2 = 2 * err;
         if (e2 >= dy) 
 		{
             err += dy;
