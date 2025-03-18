@@ -5,6 +5,8 @@
 # Prerequisites
 *.d
 so_long
+*.c.swp
+
 # Object files
 *.o
 *.ko
