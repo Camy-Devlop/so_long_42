@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/21 10:26:18 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/21 14:03:57 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,15 @@
 #ifndef DIR_FILE
 # 	define DIR_FILE "map/"
 #endif
+
+/*asset disagne */
+# define WALL "asset/wall.xpm"
+# define STAR "asset/star.xpm"
+# define DOOR "asset/door.xpm"
+
+/*asset player */
+# define DOWN1 "asset/down-1.xpm"
+# define DOWM2 "asset/down-2.xpm"
 
 typedef struct s_coord
 {
@@ -67,6 +76,7 @@ typedef struct s_card
 typedef struct s_game_room
 {
 	t_card		card;
+	t_img		asset[11];
 	t_player	p;
 }	*t_game_room;
 
@@ -99,7 +109,7 @@ typedef struct s_window
 	t_xvar		*mlx;
 	t_win_list	*win;
 	t_img       *img;
-	//TODO ajouter le player et la map
+	t_game_room	room;
 	char		*title;
 }	*t_window;
 

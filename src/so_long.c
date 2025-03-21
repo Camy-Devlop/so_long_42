@@ -6,11 +6,12 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/21 10:56:54 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/21 13:57:01 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
+/*
 void ft_free_all(t_card card)
 {
 	return (ft_free_t_card(card, card->size.height - 1));
@@ -51,7 +52,7 @@ static t_game_room	ft_preparing_game(char **tab)
 				return (ft_printf("Error E not find\n"), ft_free_all(tmp),
 						ft_free_all(room->card), NULL);
 	return (ft_free_all(tmp), room);
-}
+}*/
 
 /*
 void ft_run()
@@ -61,8 +62,8 @@ int main(int n, char **tab)
 {
 (void)tab;
 (void)n;
-	t_game_room room;
-//	t_window win;
+//	t_game_room room;
+	t_window win;
 //	(void)win;
 //	(void)win->mlx;
 //	(void)win->win;
@@ -70,13 +71,15 @@ int main(int n, char **tab)
 	if (n != 2)
 		return (-1);
 	ft_printf("tesst2 \n");
-//	win = ft_create_window(600, 800, "so long !!!!!");
+//	room = ft_preparing_game(tab);
+	win = ft_create_window(600, 800, "so long !!!!!");
 	
-//	char *asset = "asset/door.xpm";
-//	int	height;
-//	int	width;
+//	char *asset = WALL;
+	int	height;
+	int	width;
 	
-//	void *image = mlx_xpm_file_to_image(win->mlx,asset, &height,&width);
+	t_img *image = mlx_xpm_file_to_image(win->mlx,WALL, &height,&width);
+	void *image2 = mlx_xpm_file_to_image(win->mlx,STAR, &height,&width);
 	
 	
 	
@@ -87,30 +90,30 @@ int main(int n, char **tab)
 //	pix2 = ft_point(30, 142,(int)0x00FF0000);
 	//ft_draw(win->img, pix);
 	//ft_draw_line( ft_point(50, 10,(int)0x00FF0000), ft_point(11, 300, (int)0x00FF0000), win->img);
-//	if (image != NULL)
-//		mlx_put_image_to_window(win->mlx, win->win, image, 0, 0);
-	/*sleep(5);
+	if (image != NULL)
+	{
+		mlx_put_image_to_window(win->mlx, win->win, image, 0, 0);
+		mlx_put_image_to_window(win->mlx, win->win, image2, 51, 0);
+	}
+	sleep(5);
 	mlx_clear_window(win->mlx, win->win);
 	sleep(5);
-	ft_draw_line( ft_point(40, 100, (int)0x00FF0000), ft_point(41, 300, (int)0x00FF0000), win->img);*/
 	//mlx_put_image_to_window(win->mlx, win->win, win->img, 0, 0);
-	//mlx_key_hook(win->win, ft_key_move, win);
-//	mlx_hook(win->win, 33, 1L<<17, ft_close, win);	
-//	mlx_hook(win->win, 2, 1L<<0, ft_key_move, win);	
-//	mlx_loop(win->mlx);	
+	mlx_hook(win->win, 33, 1L<<17, ft_close, win);	
+	mlx_hook(win->win, 2, 1L<<0, ft_key_move, win);	
+	mlx_loop(win->mlx);	
 	//free(win);
 //	mlx_clear_window(win->mlx, win->win);
 	//ft_free_win(vars);
 	//ft_close(1,win);
 	//free(win->title);
 	//free(win->win);
-	room = ft_preparing_game(tab);
-	if (!room)
-		return (-1);
-	ft_print_map1(room->card);
-	ft_free_all(room->card);
-	ft_free_player(room->p);
-	room = NULL;
-	ft_printf("fini\n");
+//	if (!room)
+//		return (-1);
+//	ft_print_map1(room->card);
+//	ft_free_all(room->card);
+//	ft_free_player(room->p);
+//	room = NULL;
+//	ft_printf("fini\n");
 	return (0);
 }
