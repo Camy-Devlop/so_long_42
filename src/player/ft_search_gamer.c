@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 13:30:09 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/12 05:34:09 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/21 13:07:04 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static t_coord	*ft_player_coord(t_card c)
 		while (j < c->size.width)
 		{
 			if (c->map[i][j] == 'P')
-				return (p->x = i, p->y = j, p);
+				return (p->x = j, p->y = i, p);
 			j++;
 		}
 		i++;

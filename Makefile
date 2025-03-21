@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/03/17 17:59:17 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/03/21 10:35:48 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRC =./src/so_long.c \
 		./src/window/ft_window.c
 
 CC = cc 
-FLAGS = -Wall -Wextra -Werror -g3 -O3
+FLAGS = -Wall -Wextra -Werror -g3 -O0
 NAME = so_long 
 RM = rm
 OBJ = ${SRC:.c=.o}

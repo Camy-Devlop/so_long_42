@@ -6,16 +6,17 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 13:45:56 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/02 23:03:14 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/21 11:59:04 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-bool ft_check_size_t_map(t_map m)
+bool	ft_check_size_t_map(t_map m)
 {
-	size_t nb;
-	t_map t;
+	size_t	nb;
+	t_map	t;
+
 	if (!m)
 		return (false);
 	if (*(m->nb) < 3 && ft_strlen(m->line) < 3)
