@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/21 14:03:57 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/22 23:58:16 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@
 /*asset player */
 # define DOWN1 "asset/down-1.xpm"
 # define DOWM2 "asset/down-2.xpm"
+# define UP1 "asset/up-1.xpm"
+# define UP2 "asset/up-2.xpm"
+# define LEFT1 "asset/left-1.xpm"
+# define LEFT2 "asset/left-2.xpm"
+# define RIGHT1 "asset/right-1.xpm"
+# define RIGHT2 "asset/right-2.xpm"
 
 typedef struct s_coord
 {
