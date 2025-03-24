@@ -6,25 +6,29 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 13:05:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/24 14:06:01 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/24 23:21:29 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static void ft_free_t_game_room(t_game_room room)
+#include "../../include/so_long.h"
+
+static void ft_free_t_game_room(t_window win)
 {
 	int	i;
 
-	if (!room)
+	if (!win->room)
 		return ;
-	if (room->card)
-		ft_free_t_card(room->card);
-	if (room->p)
-		ft_free_gamer(room->p);
+	if (win->room->card)
+		ft_free_t_card(win->room->card, win->room->card->size.height);
+	if (win->room->p)
+		ft_free_player(win->room->p);
 	i = 0;
-	while(room->asset[i])
-		mlx_destroy_image(room->asset[i++]);
-	free(room);
-	room = NULL;
+	while(win->room->asset[i])
+	{
+		mlx_destroy_image(win->mlx, win->room->asset[i++]);
+	}
+	free(win->room);
+	win->room = NULL;
 }
 
 void ft_free_all(t_window win)
@@ -34,11 +38,11 @@ void ft_free_all(t_window win)
 	win->title = NULL;
 	ft_printf("title free");
 	if (win->room)
-		ft_free_t_game_room(win->room);
+		ft_free_t_game_room(win);
 	ft_printf("room free");
-	win->romm = NULL;
+	win->room = NULL;
 	if (win->img)
-		mlx_destroy_image(win->img);
+		mlx_destroy_image(win->mlx, win->img);
 	win->img = NULL;
 	ft_free_t_window(win);
 	win = NULL;

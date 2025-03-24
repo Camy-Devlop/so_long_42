@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/24 13:10:27 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/24 23:20:54 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 #endif
 
 # define SIZE_MAP 50
+# define NB_ASSET 11
 
 /*asset disagne */
 # define WALL "asset/wall.xpm"
@@ -84,7 +85,7 @@ typedef struct s_card
 typedef struct s_game_room
 {
 	t_card		card;
-	t_img		asset[11];
+	t_img		*asset[11];
 	t_player	p;
 }	*t_game_room;
 
