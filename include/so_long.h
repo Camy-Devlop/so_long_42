@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/22 23:58:16 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/24 13:10:27 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 #ifndef DIR_FILE
 # 	define DIR_FILE "map/"
 #endif
+
+# define SIZE_MAP 50
 
 /*asset disagne */
 # define WALL "asset/wall.xpm"
