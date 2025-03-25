@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/25 10:00:31 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/25 22:23:15 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ typedef struct s_card
 typedef struct s_game_room
 {
 	t_card		card;
-	t_img		*asset[11];
+	t_img		**asset;
 	t_player	p;
 }	*t_game_room;
 
@@ -171,7 +171,10 @@ void	ft_free_all(t_window p);
 /* function event */
 int	ft_key_move(int keycode, t_window data);
 
-/* function drqw */
+/* function load asset */
+void	ft_load_images(t_window win);
+
+/* function draw */
 void ft_draw(t_img *data, t_pixel pix, int color);
 void ft_draw_line(t_point p1, t_point p2, t_img *data);
 #endif
