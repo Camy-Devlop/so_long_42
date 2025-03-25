@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 14:10:26 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/17 16:22:27 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/03/25 10:17:39 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_close(t_window vars)
 {
-	ft_free_t_window(vars);
+	ft_free_all(vars);
 	vars = NULL;
 	exit (0);
 }

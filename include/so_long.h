@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/24 23:20:54 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/25 10:00:31 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,6 +164,9 @@ void ft_free_coord(t_coord *p);
 
 /* function free t_player */
 void	ft_free_player(t_player p);
+
+/* function free all */
+void	ft_free_all(t_window p);
 
 /* function event */
 int	ft_key_move(int keycode, t_window data);

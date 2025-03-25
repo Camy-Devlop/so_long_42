@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/24 23:40:07 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/25 10:16:48 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,27 +71,7 @@ int main(int n, char **tab)
 	if (!win->room)
 		return (ft_free_t_window(win), -1);
 	
-//	char *asset = WALL;
-	int	height;
-	int	width;
-	
-	t_img *image = mlx_xpm_file_to_image(win->mlx,WALL, &height,&width);
-	t_img *image2 = mlx_xpm_file_to_image(win->mlx,STAR, &height,&width);
-	
-	
-	
-	//t_point pix;
-	//t_point pix2;
 
-//pix  = ft_point(10, 10, (int)0x00FF0000);
-//	pix2 = ft_point(30, 142,(int)0x00FF0000);
-	//ft_draw(win->img, pix);
-	//ft_draw_line( ft_point(50, 10,(int)0x00FF0000), ft_point(11, 300, (int)0x00FF0000), win->img);
-	if (image != NULL)
-	{
-		mlx_put_image_to_window(win->mlx, win->win, image, 0, 0);
-		mlx_put_image_to_window(win->mlx, win->win, image2, 51, 0);
-	}
 	//mlx_put_image_to_window(win->mlx, win->win, win->img, 0, 0);
 	mlx_hook(win->win, 33, 1L<<17, ft_close, win);	
 	mlx_hook(win->win, 2, 1L<<0, ft_key_move, win);	

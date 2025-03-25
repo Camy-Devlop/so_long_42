@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 13:05:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/24 23:21:29 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/25 10:37:37 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void ft_free_t_game_room(t_window win)
 	if (!win->room)
 		return ;
 	if (win->room->card)
-		ft_free_t_card(win->room->card, win->room->card->size.height);
+		ft_free_t_card(win->room->card, win->room->card->size.height - 1);
 	if (win->room->p)
 		ft_free_player(win->room->p);
 	i = 0;
