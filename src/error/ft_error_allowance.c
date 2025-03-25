@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 14:47:28 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/09 16:53:16 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/25 14:34:23 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,6 @@ void	ft_err_allowance(size_t err)
 		ft_printf("Error of allowance t_card for map\n");
 	if (err == 3)
 		ft_printf("Error of allowance t_card for copy of the map\n");
+	if (err == 4)
+		ft_printf("Error of allowance t_ for image asset\n");
 }
