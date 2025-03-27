@@ -47,6 +47,19 @@ SRC =./src/so_long.c \
 		./src/image/ft_image.c \
 		./src/window/ft_window.c
 
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+    ifeq ($(shell lsb_release -si),Debian)
+        include Makefile.debian
+    else
+        include Makefile.other
+    endif
+else
+    include Makefile.other
+endif
+
+
+
 CC = cc 
 FLAGS = -Wall -Wextra -Werror -g3 -O0
 NAME = so_long 
