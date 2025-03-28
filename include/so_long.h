@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/26 17:10:41 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/28 01:00:38 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,19 @@
 # define NB_ASSET 11
 
 /*asset disagne */
-# define WALL "asset/wall.xpm"
-# define STAR "asset/star.xpm"
-# define DOOR "asset/door.xpm"
+# define WALL 0
+# define STAR 1
+# define DOOR 2
 
 /*asset player */
-# define DOWN1 "asset/down-1.xpm"
-# define DOWM2 "asset/down-2.xpm"
-# define UP1 "asset/up-1.xpm"
-# define UP2 "asset/up-2.xpm"
-# define LEFT1 "asset/left-1.xpm"
-# define LEFT2 "asset/left-2.xpm"
-# define RIGHT1 "asset/right-1.xpm"
-# define RIGHT2 "asset/right-2.xpm"
+# define DOWN1 3
+# define DOWM2 4
+# define UP1 5
+# define UP2 6
+# define LEFT1 7
+# define LEFT2 8
+# define RIGHT1 9
+# define RIGHT2 10
 
 typedef struct s_coord
 {
@@ -139,7 +139,7 @@ t_card					ft_create_card(t_map m);
 bool					ft_check_size_t_map(t_map m);
 
 /* function creation player */
-t_playe					create_t_player(t_card c);
+t_player					create_t_player(t_card c);
 
 /* function creation windows */
 t_window				ft_create_window(int x, int y, char *title);

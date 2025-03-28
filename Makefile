@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/03/25 22:04:51 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/03/28 00:51:17 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC =./src/so_long.c \
 		./src/error/ft_error_image.c \
 		./src/error/ft_error_coord.c \
 		./src/error/ft_error_gamer.c \
+		./src/error/ft_error_load_file_xpm.c \
 		./src/ft_free/ft_free_t_map.c \
 		./src/ft_free/ft_free_t_card.c \
 		./src/ft_free/ft_free_coord.c \
@@ -47,18 +48,16 @@ SRC =./src/so_long.c \
 		./src/image/ft_image.c \
 		./src/window/ft_window.c
 
-UNAME_S := $(shell uname -s)
-ifeq ($(UNAME_S),Linux)
-    ifeq ($(shell lsb_release -si),Debian)
-        include Makefile.debian
-    else
-        include Makefile.other
-    endif
-else
-    include Makefile.other
-endif
-
-
+#UNAME_S := $(shell uname -s)
+#ifeq ($(UNAME_S),Linux)
+#    ifeq ($(shell lsb_release -si),Debian)
+#        include Makefile.debian
+#    else
+#        include Makefile.other
+#    endif
+#else
+#    include Makefile.other
+#endif
 
 CC = cc 
 FLAGS = -Wall -Wextra -Werror -g3 -O0

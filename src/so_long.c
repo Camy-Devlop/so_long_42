@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/26 10:40:05 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/28 01:02:40 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,13 @@ int main(int n, char **tab)
 	
 	ft_load_images(win);
 
-
-	mlx_put_image_to_window(win->mlx, win->win, win->room->asset[0], 0, 0);
+	if (win->room->asset)
+	{
+		mlx_put_image_to_window(win->mlx, win->win, win->room->asset[0], 0, 0);
 	mlx_put_image_to_window(win->mlx, win->win, win->room->asset[1], 51, 0);
 	mlx_put_image_to_window(win->mlx, win->win, win->room->asset[2],2*51, 0);
 	mlx_put_image_to_window(win->mlx, win->win, win->room->asset[3],3*51, 0);
-	
+	}
 	mlx_hook(win->win, 33, 1L<<17, ft_close, win);	
 	mlx_hook(win->win, 2, 1L<<0, ft_key_move, win);	
 	mlx_loop(win->mlx);	

@@ -28,4 +28,6 @@ void    ft_err_player(size_t err);
 /* function error image */
 void    ft_err_image(size_t err);
 
+/* function error leading asset xpm*/
+void	ft_err_load_file_xpm(size_t err);
 #endif
