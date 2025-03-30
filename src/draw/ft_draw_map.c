@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:02:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/28 01:54:43 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/30 23:50:07 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,10 @@ void	ft_load_images(t_window win)
 
 	i = 0;
 	asset = get_address_asset();
-	printf("test ok %s\n", asset[0]);
 	if (!asset)
 		return (ft_err_allowance(4), (void)0);
-	printf("test ok 2 \n");
 	if (ft_check_file_xpm(asset) == false)
 		return (free(asset), ft_err_load_file_xpm(0), (void)0);
-
-	printf("test ok 3 \n");
 	win->room->asset = ft_calloc(NB_ASSET, sizeof(t_img *));
 	if (!win->room->asset)
 	       return ;	
@@ -74,10 +70,27 @@ void	ft_load_images(t_window win)
 	{
 		win->room->asset[i] = (t_img *)mlx_xpm_file_to_image(win->mlx, asset[i],
 				&height, &width);
-		printf("%d\n",i);
+		if (!win->room->asset[i])
+			return (ft_free_all(win),ft_err_load_file_xpm(1), exit(-1));
 		i++;
 	}
 	free(asset);
 }
 
-// void	ft_draw_map(void)
+void	ft_draw_map(t_window win)
+{
+	size_t i;
+	size_t j;
+
+	while (i < win->room->card->size.height)
+	{
+		while (j < win->room->card->size.width)
+		{
+			if (win->room->card->map[i][j] == '1')
+	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[WALL],j * SIZE_MAP, i * SIZE_MAP);
+		j++;
+		}
+		i++;
+		j = 0;
+	}
+}

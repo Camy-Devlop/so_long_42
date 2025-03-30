@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/28 01:00:38 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/30 23:18:57 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,4 +176,5 @@ void					ft_load_images(t_window win);
 /* function draw */
 void					ft_draw(t_img *data, t_pixel pix, int color);
 void					ft_draw_line(t_point p1, t_point p2, t_img *data);
+void	ft_draw_map(t_window win);
 #endif

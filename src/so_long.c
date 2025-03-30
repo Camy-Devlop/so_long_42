@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/28 01:02:40 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/30 23:53:55 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int main(int n, char **tab)
 	(void)n;
 	if (n != 2)
 		return (-1);
-	win = ft_create_window(600, 800, "so long !!!!!");
+	win = ft_create_window(3840, 2160, "so long !!!!!");
 	if (!win)
 		return (ft_err_win(3), -1);
 	win->room = ft_preparing_game(tab);
@@ -72,14 +72,7 @@ int main(int n, char **tab)
 		return (ft_free_t_window(win), -1);
 	
 	ft_load_images(win);
-
-	if (win->room->asset)
-	{
-		mlx_put_image_to_window(win->mlx, win->win, win->room->asset[0], 0, 0);
-	mlx_put_image_to_window(win->mlx, win->win, win->room->asset[1], 51, 0);
-	mlx_put_image_to_window(win->mlx, win->win, win->room->asset[2],2*51, 0);
-	mlx_put_image_to_window(win->mlx, win->win, win->room->asset[3],3*51, 0);
-	}
+	ft_draw_map(win);
 	mlx_hook(win->win, 33, 1L<<17, ft_close, win);	
 	mlx_hook(win->win, 2, 1L<<0, ft_key_move, win);	
 	mlx_loop(win->mlx);	
@@ -98,3 +91,4 @@ int main(int n, char **tab)
 //	ft_printf("fini\n");
 	return (0);
 }
+//max 43 et 76
