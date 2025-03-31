@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:02:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/30 23:50:07 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/03/31 16:06:32 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,12 @@ void	ft_draw_map(t_window win)
 		{
 			if (win->room->card->map[i][j] == '1')
 	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[WALL],j * SIZE_MAP, i * SIZE_MAP);
+			if (win->room->card->map[i][j] == 'C')
+	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[STAR],j * SIZE_MAP, i * SIZE_MAP);
+			if (win->room->card->map[i][j] == 'P')
+	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[DOWN1],j * SIZE_MAP, i * SIZE_MAP);
+			if (win->room->card->map[i][j] == 'E')
+	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[DOOR],j * SIZE_MAP, i * SIZE_MAP);
 		j++;
 		}
 		i++;
