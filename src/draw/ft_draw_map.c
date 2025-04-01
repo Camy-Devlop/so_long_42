@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:02:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/31 16:06:32 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/01 11:03:47 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,11 @@ void	ft_draw_map(t_window win)
 	size_t i;
 	size_t j;
 
+	i = 0;
+
 	while (i < win->room->card->size.height)
 	{
+		j = 0;
 		while (j < win->room->card->size.width)
 		{
 			if (win->room->card->map[i][j] == '1')
@@ -97,6 +100,5 @@ void	ft_draw_map(t_window win)
 		j++;
 		}
 		i++;
-		j = 0;
 	}
 }

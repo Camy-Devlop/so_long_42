@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/03/28 00:51:17 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/04/01 13:12:00 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRC =./src/so_long.c \
 		./src/ft_free/ft_free_t_card.c \
 		./src/ft_free/ft_free_coord.c \
 		./src/ft_free/ft_free_gamer.c \
+		./src/ft_free/ft_free_room.c \
 		./src/ft_free/ft_free_all.c \
 		./src/file/ft_file.c \
 		./src/ft_card/ft_card.c \

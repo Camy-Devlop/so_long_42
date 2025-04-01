@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define TAILLE 100  // Taille du labyrinthe (500x500)
-#define TAILLE2 100  // Taille du labyrinthe (500x500)
+#define TAILLE 3 // Taille du labyrinthe (500x500) y
+#define TAILLE2 3  // Taille du labyrinthe (500x500) x
 #define NB_COLLECTIBLES 50  // Nombre de collectibles 'C'
 
 // Fonction pour initialiser le labyrinthe avec des murs ('1') partout

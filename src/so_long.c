@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/30 23:53:55 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/01 13:11:22 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ static t_game_room	ft_preparing_game(char **tab)
 	room->card = ft_create_card(m);
 	m = NULL;
 	if (!room->card)
-		return (ft_free_t_card(room->card,
-			room->card->size.height - 1), free(room), NULL);
+		return (free(room), NULL);
 	room->p = create_t_player(ft_cp_t_card(room->card));
 	if (!room->p)
 		return (NULL);
@@ -48,7 +47,7 @@ static t_game_room	ft_preparing_game(char **tab)
 	if (!back_traking(tmp, *room->p->coord, false))
 		return (ft_printf("Error E not find\n"),
 			ft_free_t_card(tmp, tmp->size.height - 1),
-			ft_free_t_card(room->card,room->card->size.height - 1), NULL);
+			ft_free_room(room), NULL);
 	return (ft_free_t_card(tmp, tmp->size.height - 1), room);
 }
 
