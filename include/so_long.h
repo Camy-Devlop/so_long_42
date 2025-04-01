@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/01 13:09:53 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/01 23:42:16 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ typedef struct s_player
 {
 	t_coord				*coord;
 	t_bag				bag;
+	bool				move;
 } * t_player;
 typedef struct s_map	*t_map;
 typedef struct s_map
