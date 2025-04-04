@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 11:54:36 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/15 19:42:45 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:42:34 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,4 @@
 
 void	ft_square(t_coord xy, int height, int width, int color)
 {
-	
 }

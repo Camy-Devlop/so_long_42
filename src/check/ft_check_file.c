@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 23:38:54 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/02/25 12:02:42 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:38:33 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ static bool	ft_file_exist(const char *name_file)
 	if (fd <= 0)
 		return (false);
 	close(fd);
-	return res;
+	return (res);
 }
 
-static bool ft_file_access_read(char *name_file)
+static bool	ft_file_access_read(char *name_file)
 {
-	
 	int		fd;
 	bool	res;
 
@@ -49,11 +48,12 @@ static bool ft_file_access_read(char *name_file)
 	fd = open(name_file, O_RDONLY);
 	if (fd <= 0)
 		return (false);
-	if (ft_goto_end_file(fd)== -1)
-		return (close(fd),false);
+	if (ft_goto_end_file(fd) == -1)
+		return (close(fd), false);
 	close(fd);
-	return res;
+	return (res);
 }
+
 bool	ft_file_check(char *name_file)
 {
 	if (!ft_file_check_type(name_file))

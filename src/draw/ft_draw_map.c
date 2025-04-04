@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:02:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/01 11:03:47 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:18:34 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,15 @@ char	**get_address_asset(void)
 	asset[7] = "asset/left-1.xpm";
 	asset[8] = "asset/left-2.xpm";
 	asset[9] = "asset/right-1.xpm";
-	asset[10] ="asset/right-2.xpm";
+	asset[10] = "asset/right-2.xpm";
 	return (asset);
 }
 
 void	ft_load_images(t_window win)
 {
-	int	i;
-	int	height;
-	int	width;
+	int		i;
+	int		height;
+	int		width;
 	char	**asset;
 
 	i = 0;
@@ -65,13 +65,13 @@ void	ft_load_images(t_window win)
 		return (free(asset), ft_err_load_file_xpm(0), (void)0);
 	win->room->asset = ft_calloc(NB_ASSET, sizeof(t_img *));
 	if (!win->room->asset)
-	       return ;	
-	while (i < NB_ASSET)	
+		return ;
+	while (i < NB_ASSET)
 	{
 		win->room->asset[i] = (t_img *)mlx_xpm_file_to_image(win->mlx, asset[i],
 				&height, &width);
 		if (!win->room->asset[i])
-			return (ft_free_all(win),ft_err_load_file_xpm(1), exit(-1));
+			return (ft_free_all(win), ft_err_load_file_xpm(1), exit(-1));
 		i++;
 	}
 	free(asset);
@@ -79,25 +79,28 @@ void	ft_load_images(t_window win)
 
 void	ft_draw_map(t_window win)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-
 	while (i < win->room->card->size.height)
 	{
 		j = 0;
 		while (j < win->room->card->size.width)
 		{
 			if (win->room->card->map[i][j] == '1')
-	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[WALL],j * SIZE_MAP, i * SIZE_MAP);
+				mlx_put_image_to_window(win->mlx, win->win,
+					win->room->asset[WALL], j * SIZE_MAP, i * SIZE_MAP);
 			if (win->room->card->map[i][j] == 'C')
-	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[STAR],j * SIZE_MAP, i * SIZE_MAP);
+				mlx_put_image_to_window(win->mlx, win->win,
+					win->room->asset[STAR], j * SIZE_MAP, i * SIZE_MAP);
 			if (win->room->card->map[i][j] == 'P')
-	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[DOWN1],j * SIZE_MAP, i * SIZE_MAP);
+				mlx_put_image_to_window(win->mlx, win->win,
+					win->room->asset[DOWN1], j * SIZE_MAP, i * SIZE_MAP);
 			if (win->room->card->map[i][j] == 'E')
-	mlx_put_image_to_window(win->mlx, win->win,win->room->asset[DOOR],j * SIZE_MAP, i * SIZE_MAP);
-		j++;
+				mlx_put_image_to_window(win->mlx, win->win,
+					win->room->asset[DOOR], j * SIZE_MAP, i * SIZE_MAP);
+			j++;
 		}
 		i++;
 	}

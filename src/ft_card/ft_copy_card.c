@@ -6,25 +6,13 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 13:30:28 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/21 10:23:46 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:31:56 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-void	ft_print_map2(t_card m)
-{
-	if (!m)
-		return ;
-	size_t i = 0;
-	ft_printf("hauteur test %d\n",m->size.height);
-	while (i < m->size.height)
-		ft_printf("%s",m->map[i++]);
-	printf("-------CP-------\n");
-}
-
-
-t_card ft_cp_t_card(t_card c)
+t_card	ft_cp_t_card(t_card c)
 {
 	t_card	new;
 	size_t	i;
@@ -44,9 +32,8 @@ t_card ft_cp_t_card(t_card c)
 	{
 		new->map[i] = ft_strdup(c->map[i]);
 		if (!new->map[i])
-			return (ft_err_allowance(3), ft_free_t_card(new,i), NULL);
+			return (ft_err_allowance(3), ft_free_t_card(new, i), NULL);
 		i++;
 	}
 	return (new);
 }
-

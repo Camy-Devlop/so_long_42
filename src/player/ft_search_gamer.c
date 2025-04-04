@@ -6,10 +6,9 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 13:30:09 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/21 13:07:04 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:17:25 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../include/so_long.h"
 
@@ -43,9 +42,9 @@ static size_t	nb_player(t_card c)
 
 static t_coord	*ft_player_coord(t_card c)
 {
-	t_coord *p;
-	size_t i;
-	size_t j;
+	t_coord	*p;
+	size_t	i;
+	size_t	j;
 
 	if (!c || !c->map || 1 != nb_player(c))
 		return (NULL);
@@ -70,30 +69,32 @@ static t_coord	*ft_player_coord(t_card c)
 
 t_player	create_t_player(t_card c)
 {
-	t_coord *coord;
-	t_player p;
+	t_coord		*coord;
+	t_player	p;
 
 	coord = ft_player_coord(c);
 	if (!coord)
 		return (NULL);
-	if (1 > coord->y || coord->y > c->size.height - 1
-		|| 1 > coord->x || coord->x > c->size.width - 1)
-		return (ft_free_coord(coord),
-				ft_free_t_card(c,c->size.height - 1), NULL);
-	p = ft_calloc(1,sizeof(struct s_player));
+	if (1 > coord->y || coord->y > c->size.height - 1 || 1 > coord->x
+		|| coord->x > c->size.width - 1)
+		return (ft_free_coord(coord), ft_free_t_card(c, c->size.height - 1),
+			NULL);
+	p = ft_calloc(1, sizeof(struct s_player));
 	if (!p)
-		return (ft_free_coord(coord), 
-				ft_free_t_card(c,c->size.height - 1), NULL);
+		return (ft_free_coord(coord), ft_free_t_card(c, c->size.height - 1),
+			NULL);
 	p->coord = coord;
 	coord = NULL;
-	ft_free_t_card(c,c->size.height -1);
+	ft_free_t_card(c, c->size.height - 1);
 	return (p);
 }
-//ft_err_t_card(1)
+// ft_err_t_card(1)
 /*
 void	ft_print_map(t_card m)
 {
-	size_t i = 0;
+	size_t	i;
+
+	i = 0;
 	while (i < m->size.height)
 		printf("%s",m->map[i++]);
 	printf("--------------\n");
@@ -103,7 +104,7 @@ int	main(void)
 	char **m = calloc(20, sizeof(char *));
 	int i= 0;
  m[0] =strdup("1111111111111");
-			 
+
 
  m[1] =strdup("10010000000C1");
  m[2] =strdup("1000011111001");
@@ -136,7 +137,7 @@ int	main(void)
 		printf("trouver\n");
 	}
 	else
-	{ 
+	{
 		printf("non trouver\n");
 	}
 	while(i < 5)

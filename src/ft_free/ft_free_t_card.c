@@ -6,13 +6,13 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 22:42:04 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/09 17:10:52 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:33:29 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-void ft_free_t_card(t_card c, int i)
+void	ft_free_t_card(t_card c, int i)
 {
 	if (!c)
 		return ;

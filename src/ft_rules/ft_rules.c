@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:57:56 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/01 23:42:13 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:36:43 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ bool	ft_move_up(t_window win)
 		p.bag++;
 		return (c_player = NULL, card = NULL, p = NULL, true);
 	}
-		
 }
 
 bool	ft_move_down(t_window win)

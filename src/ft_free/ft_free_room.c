@@ -6,13 +6,13 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 13:02:28 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/01 13:07:06 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:36:09 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-void	ft_free_room(t_game_room  room)
+void	ft_free_room(t_game_room room)
 {
 	if (!room)
 		return ;

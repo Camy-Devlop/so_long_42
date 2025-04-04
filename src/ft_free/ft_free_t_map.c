@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_s_map.c                                    :+:      :+:    :+:   */
+/*   ft_free_t_map.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 21:09:11 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/01 11:31:17 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:33:11 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-void ft_free_t_map(t_map m)
+void	ft_free_t_map(t_map m)
 {
-	t_map t;
+	t_map	t;
 
 	if (!m)
 		return ;

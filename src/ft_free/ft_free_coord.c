@@ -6,13 +6,13 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 10:02:13 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/12 05:18:57 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:32:33 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-void ft_free_coord(t_coord *p)
+void	ft_free_coord(t_coord *p)
 {
 	if (!p)
 		return ;

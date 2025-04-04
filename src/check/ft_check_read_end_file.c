@@ -6,25 +6,25 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:11:27 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/02/25 11:56:12 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:39:02 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-int ft_goto_end_file(int fd)
+int	ft_goto_end_file(int fd)
 {
 	char	*tmp;
 	size_t	cpt;
 
 	cpt = 0;
 	while (1)
-	{	
-		tmp = get_next_line(fd);	
+	{
+		tmp = get_next_line(fd);
 		if (!tmp && cpt == 0)
-			break;
+			break ;
 		else if (!tmp)
-			break;
+			break ;
 		free(tmp);
 		tmp = NULL;
 		cpt++;

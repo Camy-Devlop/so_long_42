@@ -6,13 +6,13 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 10:26:38 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/14 18:20:42 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/04 23:32:54 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-void ft_free_t_window(t_window w)
+void	ft_free_t_window(t_window w)
 {
 	if (w)
 	{
