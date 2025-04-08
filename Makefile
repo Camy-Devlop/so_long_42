@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/04/01 13:12:00 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/04/08 20:30:34 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,6 @@ SRC =./src/so_long.c \
 		./src/ft_card/ft_card.c \
 		./src/draw/ft_draw.c \
 		./src/draw/ft_draw_map.c \
-		./src/design/ft_line.c \
 		./src/event/ft_close.c \
 		./src/event/ft_key_move.c \
 		./src/image/ft_image.c \
