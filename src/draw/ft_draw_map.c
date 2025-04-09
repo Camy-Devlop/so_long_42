@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 11:02:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/04 23:18:34 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/09 20:23:06 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char	**get_address_asset(void)
 	asset[8] = "asset/left-2.xpm";
 	asset[9] = "asset/right-1.xpm";
 	asset[10] = "asset/right-2.xpm";
+	asset[11] = "asset/bg.xpm";
+
 	return (asset);
 }
 
@@ -75,6 +77,13 @@ void	ft_load_images(t_window win)
 		i++;
 	}
 	free(asset);
+}
+
+void ft_draw_asset(t_window win, int asset, size_t x, size_t y)
+{
+
+	mlx_put_image_to_window(win->mlx, win->win,
+		win->room->asset[asset], x * SIZE_MAP, y * SIZE_MAP);
 }
 
 void	ft_draw_map(t_window win)

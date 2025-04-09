@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/08 20:21:31 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/09 22:05:20 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # endif
 
 # define SIZE_MAP 50
-# define NB_ASSET 11
+# define NB_ASSET 12
 
 /*asset disagne */
 # define WALL 0
@@ -44,6 +44,7 @@
 # define LEFT2 8
 # define RIGHT1 9
 # define RIGHT2 10
+# define BG 11
 
 typedef struct s_coord
 {
@@ -183,6 +184,7 @@ int							ft_key_move(int keycode, t_window data);
 void						ft_load_images(t_window win);
 
 /* function draw */
+void						ft_draw_asset(t_window win, int asset);
 void						ft_draw(t_img *data, t_pixel pix, int color);
 void						ft_draw_line(t_point p1, t_point p2, t_img *data);
 void						ft_draw_map(t_window win);
