@@ -6,51 +6,31 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:44:34 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/04 23:18:57 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/10 23:20:09 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-static bool	ft_filt(int key)
+static bool	ft_filt(int key, t_window data)
 {
-	if (key == 119)
-		return (true);
-	else if (key == 97)
-		return (true);
-	else if (key == 100)
-		return (true);
-	else if (key == 115)
-		return (true);
-	else if (65361 <= key && key <= 65364)
-		return (true);
-	else if (65307 <= key)
-		return (true);
+	if (key == 119 || key == 65362)
+		return (ft_move_up(data));
+	else if (key == 97 || key == 65361)
+		return (ft_move_left(data));
+	else if (key == 100 || key == 65363)
+		return (ft_move_right(data));
+	else if (key == 115 || key == 65364)
+		return (ft_move_down(data));
 	else
 		return (false);
 }
 
 int	ft_key_move(int keycode, t_window data)
 {
-	if (keycode == 119)
-		ft_printf("valeur haut %d\n", keycode);
-	else if (keycode == 97)
-		ft_printf("valeur gauche %d\n", keycode);
-	else if (keycode == 100)
-		ft_printf("valeur droit %d\n", keycode);
-	else if (keycode == 115)
-		ft_printf("valeur bas %d\n", keycode);
-	else if (keycode == 65361)
-		ft_printf("valeur gauche %d\n", keycode);
-	else if (keycode == 65362)
-		ft_printf("valeur haut %d\n", keycode);
-	else if (keycode == 65363)
-		ft_printf("valeur droit %d\n", keycode);
-	else if (keycode == 65364)
-		ft_printf("valeur bas %d\n", keycode);
 	else if (keycode == 65307)
 		ft_close(data);
-	if (ft_filt(keycode))
+	if (ft_filt(keycode, data))
 		ft_printf("number of move %d\n", (data->cpt++));
 	return (0);
 }
