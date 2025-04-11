@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/04/10 22:15:11 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/04/11 21:53:14 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,6 @@ SRC =./src/so_long.c \
 		./src/ft_rules/ft_move_left.c \
 		./src/ft_rules/ft_move_right.c \
 		./src/ft_rules/ft_move_player.c \
-		./src/ft_rules/ft_rules.c \
 		./src/event/ft_close.c \
 		./src/event/ft_key_move.c \
 		./src/image/ft_image.c \

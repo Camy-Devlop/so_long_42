@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:44:34 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/10 23:20:09 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/11 20:03:00 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static bool	ft_filt(int key, t_window data)
 
 int	ft_key_move(int keycode, t_window data)
 {
-	else if (keycode == 65307)
+	 if (keycode == 65307)
 		ft_close(data);
 	if (ft_filt(keycode, data))
 		ft_printf("number of move %d\n", (data->cpt++));

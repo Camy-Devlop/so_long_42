@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/10 23:52:00 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/11 20:46:08 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,11 +188,11 @@ void						ft_draw_asset(t_window win, int asset,  size_t x, size_t y);
 void						ft_draw(t_img *data, t_pixel pix, int color);
 void						ft_draw_line(t_point p1, t_point p2, t_img *data);
 void						ft_draw_map(t_window win);
-void	ft_move_player(t_window win, t_coord *c_player, t_player p, t_card card);
+void	ft_move_player(t_window win, t_coord *c_player, t_player p, int move);
 bool						ft_move_up(t_window win);
 bool						ft_move_down(t_window win);
 bool						ft_move_left(t_window win);
 bool						ft_move_right(t_window win);
-void						init_move(t_window win, t_coord *c_player,
-								t_player p);
+void						init_move(t_window win, t_coord **c_player,
+								t_player *p, t_card *card);
 #endif

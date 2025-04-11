@@ -6,20 +6,11 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/01 13:11:22 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/11 21:51:54 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
-
-void	ft_print_map1(t_card m)
-{
-	size_t i = 0;
-	ft_printf("hauteur test %d\n",m->size.height);
-	while (i < m->size.height)
-		ft_printf("%s",m->map[i++]);
-	printf("-------F-------\n");
-}
 
 static t_game_room	ft_preparing_game(char **tab)
 {
@@ -27,9 +18,9 @@ static t_game_room	ft_preparing_game(char **tab)
 	t_map		m;
 	t_card		tmp;
 
-	if(!ft_file_check(tab[1]))
+	if (!ft_file_check(tab[1]))
 		return (NULL);
-	room = ft_calloc(1,sizeof(struct s_game_room));
+	room = ft_calloc(1, sizeof(struct s_game_room));
 	if (!room)
 		return (ft_printf("Error not create room"), NULL);
 	m = ft_recover_card(tab[1]);
@@ -45,19 +36,14 @@ static t_game_room	ft_preparing_game(char **tab)
 		return (ft_free_t_card(room->card, room->card->size.height - 1),
 			free(room), NULL);
 	if (!back_traking(tmp, *room->p->coord, false))
-		return (ft_printf("Error E not find\n"),
-			ft_free_t_card(tmp, tmp->size.height - 1),
-			ft_free_room(room), NULL);
+		return (ft_printf("Error E not find\n"), ft_free_t_card(tmp,
+				tmp->size.height - 1), ft_free_room(room), NULL);
 	return (ft_free_t_card(tmp, tmp->size.height - 1), room);
 }
 
-/*
-void ft_run()
-*/
-
-int main(int n, char **tab)
+int	main(int n, char **tab)
 {
-	t_window win;
+	t_window	win;
 
 	(void)tab;
 	(void)n;
@@ -69,25 +55,11 @@ int main(int n, char **tab)
 	win->room = ft_preparing_game(tab);
 	if (!win->room)
 		return (ft_free_t_window(win), -1);
-	
 	ft_load_images(win);
 	ft_draw_map(win);
-	mlx_hook(win->win, 33, 1L<<17, ft_close, win);	
-	mlx_hook(win->win, 2, 1L<<0, ft_key_move, win);	
-	mlx_loop(win->mlx);	
-	//free(win);
-//	mlx_clear_window(win->mlx, win->win);
-	//ft_free_win(vars);
-	//ft_close(1,win);
-	//free(win->title);
-	//free(win->win);
-//	if (!room)
-//		return (-1);
-//	ft_print_map1(room->card);
-//	ft_free_all(room->card);
-//	ft_free_player(room->p);
-//	room = NULL;
-//	ft_printf("fini\n");
+	win->room->card->map[win->room->p->coord->y][win->room->p->coord->x] = '0';
+	mlx_hook(win->win, 33, 1L << 17, ft_close, win);
+	mlx_hook(win->win, 2, 1L << 0, ft_key_move, win);
+	mlx_loop(win->mlx);
 	return (0);
 }
-//max 43 et 76
