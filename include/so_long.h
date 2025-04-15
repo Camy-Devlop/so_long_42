@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/11 20:46:08 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/15 22:38:33 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,8 @@ int							ft_close(t_window vars);
 
 /* function  back tracking */
 bool						back_traking(t_card c, t_coord now, bool t);
+bool						back_traking_c(t_card c, t_bag *bag, t_coord now, bool t);
+size_t						nb_collector(t_card c);
 /* function  copy of card */
 t_card						ft_cp_t_card(t_card c);
 /* function check */

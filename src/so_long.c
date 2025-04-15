@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/11 21:51:54 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/15 23:23:01 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,22 @@ static t_game_room	ft_preparing_game(char **tab)
 	room->p = create_t_player(ft_cp_t_card(room->card));
 	if (!room->p)
 		return (NULL);
+	
 	tmp = ft_cp_t_card(room->card);
 	if (!tmp)
 		return (ft_free_t_card(room->card, room->card->size.height - 1),
 			free(room), NULL);
 	if (!back_traking(tmp, *room->p->coord, false))
 		return (ft_printf("Error E not find\n"), ft_free_t_card(tmp,
+				tmp->size.height - 1), ft_free_room(room), NULL);
+	ft_free_t_card(tmp, tmp->size.height - 1);
+	tmp = ft_cp_t_card(room->card);
+	if (!tmp)
+		return (ft_free_t_card(room->card, room->card->size.height - 1),
+			free(room), NULL);
+	room->p->bag.nb = nb_collector(tmp);
+	if (!back_traking_c(tmp, &room->p->bag, *room->p->coord, false))
+		return (ft_printf("Error collecter not find\n"), ft_free_t_card(tmp,
 				tmp->size.height - 1), ft_free_room(room), NULL);
 	return (ft_free_t_card(tmp, tmp->size.height - 1), room);
 }

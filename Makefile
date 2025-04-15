@@ -6,7 +6,7 @@
 #    By: isadbaib <isadbaib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/20 08:37:37 by isadbaib          #+#    #+#              #
-#    Updated: 2025/04/11 21:53:14 by isadbaib         ###   ########.fr        #
+#    Updated: 2025/04/15 22:13:01 by isadbaib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ LIBX = $(LIBX_SRC)libmlx.a
 LIBX_LINUX = $(LIBX_SRC)libmlx_Linux.a
 SRC =./src/so_long.c \
 		./src/backtrack/ft_back_traking.c \
+		./src/backtrack/ft_back_traking_c.c \
 		./src/player/ft_search_gamer.c \
 		./src/ft_card/ft_copy_card.c \
 		./src/check/ft_check_file.c \
