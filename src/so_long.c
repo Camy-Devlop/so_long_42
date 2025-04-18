@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/15 23:23:01 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/04/18 22:50:02 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,14 @@ static t_game_room	ft_preparing_game(char **tab)
 	room->p = create_t_player(ft_cp_t_card(room->card));
 	if (!room->p)
 		return (NULL);
-	
 	tmp = ft_cp_t_card(room->card);
+	if (ft_check_card_map(tmp->map, &room->card->size) == false)
+	{
+		ft_free_t_card(tmp, room->card->size.height - 1);
+		tmp = NULL;
+	}
 	if (!tmp)
-		return (ft_free_t_card(room->card, room->card->size.height - 1),
-			free(room), NULL);
+		return (ft_free_room(room), NULL);
 	if (!back_traking(tmp, *room->p->coord, false))
 		return (ft_printf("Error E not find\n"), ft_free_t_card(tmp,
 				tmp->size.height - 1), ft_free_room(room), NULL);
@@ -66,6 +69,8 @@ int	main(int n, char **tab)
 	if (!win->room)
 		return (ft_free_t_window(win), -1);
 	ft_load_images(win);
+	if (!win->room->asset)
+		return (ft_free_all(win), ft_err_load_file_xpm(1), -1);
 	ft_draw_map(win);
 	win->room->card->map[win->room->p->coord->y][win->room->p->coord->x] = '0';
 	mlx_hook(win->win, 33, 1L << 17, ft_close, win);

@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/15 22:38:33 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/04/18 21:55:24 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,6 +147,7 @@ int							ft_goto_end_file(int fd);
 void						*ft_recover_card(char *name_file);
 t_card						ft_create_card(t_map m);
 bool						ft_check_size_t_map(t_map m);
+bool						ft_check_card_map(char **map, t_size_card *s);
 
 /* function creation player */
 t_player					create_t_player(t_card c);

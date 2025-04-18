@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 13:45:56 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/16 02:23:51 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/04/18 22:27:50 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,22 @@
 bool	ft_check_card_map(char **map, t_size_card *s)
 {
 	size_t i;
-	size_t j;
+
 	if (!map || !s)
 		return (false);
 	i = 0;
-	while (i < s->width)
+	while (i < s->width - 1)
 	{
-		if (map[0][i] != '1' || map[s->height-1][i] != '1')
+		if (map[0][i] != '1' || map[s->height - 1][i] != '1')
 			return (false);
-	
+		i++;		
+	}
+	i = 1;
+	while (i < s->height - 2)
+	{
+		if (map[i][0] != '1' || map[i][s->width - 2] != '1')
+			return (false);
+		i++;
 	}
 	return (true);
 }
