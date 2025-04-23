@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 22:05:34 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/11 20:52:45 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/20 16:25:43 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,6 @@ bool	ft_move_up(t_window win)
 	t_player	p;
 	t_card		card;
 
-	c_player = NULL;
-	p = NULL;
-	card = NULL;
-	(void)p;
-	(void)c_player;
-	(void)card;
 	init_move(win, &c_player, &p, &card);
 	if (card->map[c_player->y - 1][c_player->x] == '1')
 		return (c_player = NULL, card = NULL, p = NULL, false);

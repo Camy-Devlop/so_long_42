@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 13:05:29 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/19 02:16:08 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/20 16:27:56 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ static void	ft_free_t_game_room(t_window win)
 		ft_free_player(win->room->p);
 	i = 0;
 	if (win->room->asset)
-	{	while (i < NB_ASSET)
+	{
+		while (i < NB_ASSET)
 		{
 			if (win->room->asset[i])
 				mlx_destroy_image(win->mlx, win->room->asset[i]);
 			i++;
 		}
-	
 		free(win->room->asset);
 	}
 	win->room->asset = NULL;
