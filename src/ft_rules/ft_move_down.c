@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 21:46:16 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/20 16:19:25 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:05:30 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,16 @@ bool	ft_move_down(t_window win)
 		c_player->y++;
 		ft_move_player(win, c_player, p, DOWN1);
 		return (c_player = NULL, card = NULL, p = NULL, true);
+	}
+	if (card->map[c_player->y + 1][c_player->x] == 'E')
+	{
+		ft_draw_asset(win, BG, c_player->x, c_player->y);
+		c_player->y++;
+		ft_move_player(win, c_player, p, DOWN1);
+		c_player = NULL;
+	       	card = NULL;
+	       	p = NULL;
+		return (ft_close(win), true);
 	}
 	return (false);
 }
