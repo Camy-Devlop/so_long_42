@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error_load_file_xpm.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 00:44:18 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/20 16:24:46 by isadbaib         ###   ########.fr       */
+/*   Created: 2025/04/26 20:53:17 by isadbaib          #+#    #+#             */
+/*   Updated: 2025/04/26 20:53:22 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

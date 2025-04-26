@@ -6,11 +6,20 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 21:46:16 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/24 08:31:09 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/26 20:09:35 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
+
+static void	update_image_down(t_card c, t_coord *c_p, t_player p, t_window win)
+{
+	ft_draw_asset(win, BG, c_p->x, c_p->y);
+	if (c->map[c_p->y][c_p->x] == 'E')
+		ft_draw_asset(win, DOOR, c_p->x, c_p->y);
+	c_p->y++;
+	ft_move_player(win, c_p, p, DOWN1);
+}
 
 bool	ft_move_down(t_window win)
 {
@@ -19,34 +28,24 @@ bool	ft_move_down(t_window win)
 	t_card		card;
 
 	init_move(win, &c_player, &p, &card);
-	if (card->map[c_player->y + 1][c_player->x] == '1')
-		return (c_player = NULL, card = NULL, p = NULL, false);
 	if (card->map[c_player->y + 1][c_player->x] == 'C')
 	{
-		p->bag.nb++;
-		ft_draw_asset(win, BG, c_player->x, c_player->y);
-		c_player->y++;
-		ft_move_player(win, c_player, p, DOWN1);
+		p->bag.nb--;
+		update_image_down(card, c_player, p, win);
 		card->map[c_player->y][c_player->x] = '0';
 		return (c_player = NULL, card = NULL, p = NULL, true);
 	}
 	if (card->map[c_player->y + 1][c_player->x] == '0')
 	{
-		ft_draw_asset(win, BG, c_player->x, c_player->y);
-		c_player->y++;
-		ft_move_player(win, c_player, p, DOWN1);
+		update_image_down(card, c_player, p, win);
 		return (c_player = NULL, card = NULL, p = NULL, true);
 	}
 	if (card->map[c_player->y + 1][c_player->x] == 'E')
 	{
-		ft_draw_asset(win, BG, c_player->x, c_player->y);
-		c_player->y++;
-		ft_move_player(win, c_player, p, DOWN1);
+		update_image_down(card, c_player, p, win);
 		c_player = NULL;
-	       	card = NULL;
-	       	p = NULL;
-		if (win->room->)
-		return (ft_close(win), true);
+		if (p->bag.nb == 0)
+			return (card = NULL, p = NULL, ft_close(win), true);
 	}
-	return (false);
+	return (c_player = NULL, card = NULL, p = NULL, false);
 }

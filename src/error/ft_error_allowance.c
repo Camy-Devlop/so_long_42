@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error_allowance.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/09 14:47:28 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/03/28 01:06:09 by isadbaib         ###   ########.fr       */
+/*   Created: 2025/04/26 20:52:04 by isadbaib          #+#    #+#             */
+/*   Updated: 2025/04/26 20:52:11 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
