@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 21:46:16 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/23 11:05:30 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/04/24 08:31:09 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ bool	ft_move_down(t_window win)
 		c_player = NULL;
 	       	card = NULL;
 	       	p = NULL;
+		if (win->room->)
 		return (ft_close(win), true);
 	}
 	return (false);
