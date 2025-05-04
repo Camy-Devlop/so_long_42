@@ -23,9 +23,6 @@ static void	update_image_up(t_card c, t_coord *c_p, t_player p, t_window win)
 
 void	init_move(t_window win, t_coord **c_player, t_player *p, t_card *card)
 {
-	(void)p;
-	(void)c_player;
-	(void)card;
 	*c_player = win->room->p->coord;
 	*card = win->room->card;
 	*p = win->room->p;

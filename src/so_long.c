@@ -40,8 +40,6 @@ static bool	ft_init1(char **tab, t_game_room *room, t_map *m, t_card *tmp)
 	return (true);
 }
 
-
-
 static t_game_room	ft_preparing_game(char **tab)
 {
   t_game_room	room;
@@ -65,7 +63,6 @@ static t_game_room	ft_preparing_game(char **tab)
 		return (ft_printf("Error collecter not find\n"), ft_free_t_card(tmp,
 				tmp->size.height - 1), ft_free_room(room), NULL);
 	return (ft_free_t_card(tmp, tmp->size.height - 1), room);
-
 }
 
 int	main(int n, char **tab)
