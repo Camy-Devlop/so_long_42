@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/18 21:55:24 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/05/14 22:02:44 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,8 @@ int							ft_close(t_window vars);
 
 /* function  back tracking */
 bool						back_traking(t_card c, t_coord now, bool t);
-bool						back_traking_c(t_card c, t_bag *bag, t_coord now, bool t);
+bool						back_traking_c(t_card c, t_bag *bag, t_coord now,
+								bool t);
 size_t						nb_collector(t_card c);
 /* function  copy of card */
 t_card						ft_cp_t_card(t_card c);
@@ -187,11 +188,13 @@ int							ft_key_move(int keycode, t_window data);
 void						ft_load_images(t_window win);
 
 /* function draw */
-void						ft_draw_asset(t_window win, int asset,  size_t x, size_t y);
+void						ft_draw_asset(t_window win, int asset, size_t x,
+								size_t y);
 void						ft_draw(t_img *data, t_pixel pix, int color);
 void						ft_draw_line(t_point p1, t_point p2, t_img *data);
 void						ft_draw_map(t_window win);
-void	ft_move_player(t_window win, t_coord *c_player, t_player p, int move);
+void						ft_move_player(t_window win, t_coord *c_player,
+								t_player p, int move);
 bool						ft_move_up(t_window win);
 bool						ft_move_down(t_window win);
 bool						ft_move_left(t_window win);
