@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/05/03 19:19:28 by isadbaib         ###   ########lyon.fr   */
+/*   Updated: 2025/05/23 14:31:21 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static bool	ft_init1(char **tab, t_game_room *room, t_map *m, t_card *tmp)
 
 static t_game_room	ft_preparing_game(char **tab)
 {
-  t_game_room	room;
+	t_game_room	room;
 	t_map		m;
 	t_card		tmp;
 
