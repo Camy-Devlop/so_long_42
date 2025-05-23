@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 13:30:48 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/04/04 23:41:47 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/05/23 14:23:13 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	nb_collector(t_card c)
 		return (0);
 	if (!c->map)
 		return (0);
-	if (c->size.height < 3 || c->size.width < 3)
+	if (c->size.height < 3 || c->size.width < 4)
 		return (0);
 	i = 0;
 	collector = 0;
@@ -77,10 +77,10 @@ bool	back_traking_c(t_card c, t_bag *bag, t_coord now, bool t)
 	if (1 > now.y || now.y > c->size.height - 1 || 1 > now.x
 		|| now.x > c->size.width - 1)
 		return (false);
-	if (bag->nb == bag->nb_collected)
-		return (true);
 	if (c->map[now.y][now.x] == 'C')
 		bag->nb_collected++;
+	if (bag->nb == bag->nb_collected)
+		return (true);
 	c->map[now.y][now.x] = 'D';
 	i = 0;
 	while (i < 4)
