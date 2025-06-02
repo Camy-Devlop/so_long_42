@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 15:23:51 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/05/23 14:31:21 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/06/02 11:21:24 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ int	main(int n, char **tab)
 	ft_draw_map(win);
 	win->room->card->map[win->room->p->coord->y][win->room->p->coord->x] = '0';
 	mlx_hook(win->win, 33, 1L << 17, ft_close, win);
+	mlx_hook(win->win, 3, 1L << 1, ft_key_move2, win);
 	mlx_hook(win->win, 2, 1L << 0, ft_key_move, win);
 	mlx_loop(win->mlx);
 	return (0);

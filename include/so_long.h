@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/05/14 22:02:44 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/06/02 11:26:39 by isadbaib         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,10 @@ typedef struct s_window
 	t_img					*img;
 	t_game_room				room;
 	char					*title;
+	bool					up;
+	bool					down;
+	bool					left;
+	bool					right;
 }							t_windo;
 
 /* function  close windows */
@@ -183,6 +187,7 @@ void						ft_free_all(t_window p);
 
 /* function event */
 int							ft_key_move(int keycode, t_window data);
+int							ft_key_move2(int keycode, t_window data);
 
 /* function load asset */
 void						ft_load_images(t_window win);
