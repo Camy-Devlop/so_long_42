@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:44:34 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/06/02 20:41:46 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/06/03 11:16:15 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static bool	ft_filt(int key, t_window data)
 
 int	ft_move(t_window data)
 {
-	ft_wait(50000000);
+	ft_wait(27000000);
 	if (data->up)
 		ft_move_up(data);
 	else if (data->down)

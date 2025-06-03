@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 09:05:59 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/06/02 20:39:49 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/06/03 11:18:15 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,9 +134,9 @@ typedef struct s_window
 	bool					right;
 }							t_windo;
 
-bool	ft_wait(int v);
+bool						ft_wait(int v);
 
-int	ft_move(t_window data);
+int							ft_move(t_window data);
 /* function  close windows */
 int							ft_close(t_window vars);
 

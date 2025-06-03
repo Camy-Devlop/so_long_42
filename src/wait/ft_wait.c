@@ -6,13 +6,13 @@
 /*   By: isadbaib <isadbaib@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 19:29:08 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/06/02 20:47:12 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/06/03 11:17:48 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/so_long.h"
 
-bool ft_wait(int v)
+bool	ft_wait(int v)
 {
 	int	i;
 
@@ -20,6 +20,7 @@ bool ft_wait(int v)
 		return (false);
 	i = 0;
 	while (++i < v)
-	{}
+	{
+	}
 	return (true);
 }
