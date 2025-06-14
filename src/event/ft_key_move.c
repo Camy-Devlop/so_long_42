@@ -6,7 +6,7 @@
 /*   By: isadbaib <isadbaib@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:44:34 by isadbaib          #+#    #+#             */
-/*   Updated: 2025/06/03 11:16:15 by isadbaib         ###   ########.fr       */
+/*   Updated: 2025/06/14 02:13:04 by isadbaib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,20 @@ static bool	ft_filt(int key, t_window data)
 
 int	ft_move(t_window data)
 {
+	bool	test;
+
+	test = false;
 	ft_wait(27000000);
 	if (data->up)
-		ft_move_up(data);
+		test = ft_move_up(data);
 	else if (data->down)
-		ft_move_down(data);
+		test = ft_move_down(data);
 	if (data->left)
-		ft_move_left(data);
+		test = ft_move_left(data);
 	else if (data->right)
-		ft_move_right(data);
+		test = ft_move_right(data);
+	if (test)
+		ft_printf("number of move %d\n", (data->cpt++));
 	return (0);
 }
 
@@ -55,8 +60,7 @@ int	ft_key_move(int keycode, t_window data)
 {
 	if (keycode == 65307)
 		ft_close(data);
-	if (ft_filt(keycode, data))
-		ft_printf("number of move %d\n", (data->cpt++));
+	ft_filt(keycode, data);
 	return (0);
 }
 
